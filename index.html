@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>unframe | Event Design & Strategy Studio</title>
+    <!-- Webpage Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    
+    <!-- Tailwind CSS Engine -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    
+    <!-- Adobe Fonts Embed (FreightBig Pro & Acumin Pro) + Google Fonts (Courier Prime) -->
+    <link rel="stylesheet" href="https://use.typekit.net/your-kit-id.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --font-freight-italic: "freight-big-pro", serif; 
+            --font-courier: "Courier Prime", monospace;    
+            --font-acumin-light: "acumin-pro", sans-serif;  
+            --font-acumin-semi: "acumin-pro", sans-serif;   
+            
+            --color-bg: #232328;      
+            --color-text: #e6e7e8;    
+            --color-accent: #f16263;  
+        }
+
+        body { 
+            background-color: var(--color-bg); 
+            color: var(--color-text);
+            font-family: var(--font-acumin-light);
+            font-weight: 300;
+        }
+
+        h1, h2, h3, h4, .font-freight {
+            font-family: var(--font-freight-italic);
+            font-style: italic;
+            font-weight: 500;
+        }
+
+        .font-mono-courier {
+            font-family: var(--font-courier);
+            font-weight: 400;
+        }
+
+        .font-sans-semi {
+            font-family: var(--font-acumin-semi);
+            font-weight: 600;
+        }
+
+        .text-accent { color: var(--color-accent); }
+        .bg-accent { background-color: var(--color-accent); }
+        .border-brand { border-color: rgba(230, 231, 232, 0.1); }
+    </style>
+</head>
+<body class="antialiased selection:bg-[#f16263] selection:text-[#232328]">
+
+    <!-- NAVIGATION WITH LOGO & HAMBURGER -->
+    <nav class="border-b border-brand bg-[#232328]/90 backdrop-blur sticky top-0 z-50 px-6 py-4 md:px-12">
+        <div class="max-w-7xl mx-auto flex justify-between items-center relative">
+            
+            <!-- Company Logo Image Asset -->
+            <a href="#" class="block hover:opacity-90 transition">
+                <img src="unframe logo.png" alt="unframe" class="h-8 w-auto object-contain">
+            </a>
+            
+            <input type="checkbox" id="menu-toggle" class="hidden peer">
+            
+            <label for="menu-toggle" class="cursor-pointer p-2 z-50 block hover:opacity-80 transition" aria-label="Toggle Navigation Menu">
+                <div class="w-6 h-0.5 bg-[#e6e7e8] mb-1.5 transition-all peer-checked:rotate-45 peer-checked:translate-y-2"></div>
+                <div class="w-6 h-0.5 bg-[#e6e7e8] mb-1.5 transition-all peer-checked:opacity-0"></div>
+                <div class="w-6 h-0.5 bg-[#e6e7e8] transition-all peer-checked:-rotate-45 peer-checked:-translate-y-2"></div>
+            </label>
+
+            <div id="mobile-menu" class="hidden peer-checked:block absolute top-full right-0 mt-3 w-64 bg-[#232328] border border-brand p-6 shadow-2xl transition-all duration-300">
+                <ul class="space-y-4 font-mono-courier text-sm uppercase tracking-wider">
+                    <li><a href="#about" class="block hover:text-accent py-2 border-b border-brand/50">About</a></li>
+                    <li><a href="#works" class="block hover:text-accent py-2 border-b border-brand/50">Works</a></li>
+                    <li><a href="#clients" class="block hover:text-accent py-2 border-b border-brand/50">Clients</a></li>
+                    <li><a href="#contact" class="block hover:text-accent py-2">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- INTRO SECTION -->
+    <header class="relative px-6 py-24 md:px-12 md:py-36 max-w-7xl mx-auto border-b border-brand">
+        <div class="max-w-4xl">
+            <p class="font-mono-courier text-xs uppercase tracking-widest text-accent mb-6">Event Design & Strategy Studio</p>
+            <h1 class="text-4xl md:text-7xl font-medium tracking-tight leading-none text-[#e6e7e8] mb-10">
+                what do your guests remember <br class="hidden md:block">
+                the morning after your event?
+            </h1>
+            <p class="text-xl md:text-2xl text-[#e6e7e8]/80 font-light max-w-2xl leading-relaxed mb-12">
+                Most events communicate nothing. Not because of poor execution. Because no one asked what the event was supposed to say in the first place.
+            </p>
+            <div class="border-l border-accent pl-6">
+                <p class="text-lg md:text-xl text-[#e6e7e8] italic font-freight">
+                    An event without a strategic argument is decoration.
+                </p>
+                <p class="font-mono-courier text-xs uppercase tracking-wider text-[#e6e7e8]/50 mt-2">this is the problem we were built to solve.</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- ABOUT / TEAM SECTION -->
+    <section id="about" class="px-6 py-24 md:px-12 max-w-7xl mx-auto border-b border-brand">
+        <div class="mb-16">
+            <p class="font-mono-courier text-xs text-[#e6e7e8]/50 uppercase tracking-widest mb-3">the four people responsible for your event.</p>
+        </div>
+
+        <div class="grid lg:grid-cols-4 sm:grid-cols-2 gap-x-8 gap-y-16 items-start">
+            <!-- Inga -->
+            <div class="flex flex-col">
+                <div class="bg-[#e6e7e8]/5 aspect-square border border-brand grayscale hover:grayscale-0 transition duration-300 overflow-hidden mb-6">
+                    <img src="Inga.png" alt="Inga Pirtskhalaishvili" class="w-full h-full object-cover">
+                </div>
+                <div>
+                    <h3 class="text-2xl text-[#e6e7e8] not-italic font-freight">Inga Pirtskhalaishvili</h3>
+                    <p class="font-mono-courier text-xs uppercase tracking-wider text-[#e6e7e8]/50 mt-1">CEO</p>
+                </div>
+                <div class="pt-4 flex flex-col justify-between flex-grow">
+                    <p class="text-sm text-[#e6e7e8]/70 leading-relaxed font-light mb-4">
+                        Responsible for strategy, client relationships, and ensuring every brief is understood before a single design decision is made.
+                    </p>
+                    <a href="https://inevents.my.canva.site/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZnRzaAS54BZwZG9mAmV4dG4DYWVtAjExAHNydGMGYXBwX2lkDzEyNDAyNDU3NDI4NzQxNAABp-NmMLj8j7gx3HJmzTUPUo-wqeCogB6UkeNA0lfWw0wTFYn9GwSXu6Vn9-6L_aem_ZqzpXDeiJEN3RsaMIFgItQ" target="_blank" rel="noopener noreferrer" class="font-mono-courier text-xs text-accent inline-block hover:underline">more...</a>
+                </div>
+            </div>
+
+            <!-- Joseph -->
+            <div class="flex flex-col">
+                <div class="bg-[#e6e7e8]/5 aspect-square border border-brand grayscale hover:grayscale-0 transition duration-300 overflow-hidden mb-6">
+                    <img src="Joseph.png" alt="Joseph K." class="w-full h-full object-cover">
+                </div>
+                <div>
+                    <h3 class="text-2xl text-[#e6e7e8] not-italic font-freight">Joseph K.</h3>
+                    <p class="font-mono-courier text-xs uppercase tracking-wider text-[#e6e7e8]/50 mt-1">Art Director</p>
+                </div>
+                <div class="pt-4 flex flex-col justify-between flex-grow">
+                    <p class="text-sm text-[#e6e7e8]/70 leading-relaxed font-light mb-4">
+                        Responsible for the visual argument - every space, every material, every typographic and environmental decision.
+                    </p>
+                    <a href="https://josephkats.myportfolio.com/" target="_blank" rel="noopener noreferrer" class="font-mono-courier text-xs text-accent inline-block hover:underline">more...</a>
+                </div>
+            </div>
+
+            <!-- Stretched Text Block Container for Lasha & Likuna -->
+            <div class="sm:col-span-2 flex flex-col">
+                <div class="grid grid-cols-2 gap-x-8">
+                    <!-- Lasha Header Block -->
+                    <div class="flex flex-col">
+                        <div class="bg-[#e6e7e8]/5 aspect-square border border-brand grayscale hover:grayscale-0 transition duration-300 overflow-hidden mb-6">
+                            <img src="Lasha.png" alt="Lasha Kipshidze" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h3 class="text-2xl text-[#e6e7e8] not-italic font-freight">Lasha Kipshidze</h3>
+                            <p class="font-mono-courier text-xs uppercase tracking-wider text-[#e6e7e8]/50 mt-1">Project Lead</p>
+                        </div>
+                    </div>
+
+                    <!-- Likuna Header Block -->
+                    <div class="flex flex-col">
+                        <div class="bg-[#e6e7e8]/5 aspect-square border border-brand grayscale hover:grayscale-0 transition duration-300 overflow-hidden mb-6">
+                            <img src="Likuna.png" alt="Likuna Tsibadze" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h3 class="text-2xl text-[#e6e7e8] not-italic font-freight">Likuna Tsibadze</h3>
+                            <p class="font-mono-courier text-xs uppercase tracking-wider text-[#e6e7e8]/50 mt-1">Project Lead</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Shared Full-Width Column Description positioned precisely to share baseline -->
+                <div class="pt-4 flex flex-col justify-between flex-grow">
+                    <p class="text-sm text-[#e6e7e8]/70 leading-relaxed font-light mb-4">
+                        Responsible for translating concepts into production reality. The people who make sure what was promised is what gets built. They are behind the complete guest journey - from the invitation to the final moment of the evening.
+                    </p>
+                    <div class="grid grid-cols-2 gap-x-8">
+                        <div>
+                            <a href="https://www.linkedin.com/in/lasha-kipshidze-65a0651a2/" target="_blank" rel="noopener noreferrer" class="font-mono-courier text-xs text-accent inline-block hover:underline">more...</a>
+                        </div>
+                        <div>
+                            <a href="https://www.linkedin.com/in/lika-tsibadze-192732275/" target="_blank" rel="noopener noreferrer" class="font-mono-courier text-xs text-accent inline-block hover:underline">more...</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-20 border-t border-brand/30 pt-8">
+            <p class="font-mono-courier text-xs uppercase tracking-widest text-accent text-center md:text-left">
+                one studio. end-to-end responsibility. no handoffs.
+            </p>
+        </div>
+    </section>
+
+    <!-- POSITIONING STATEMENT -->
+    <section class="px-6 py-20 md:px-12 max-w-7xl mx-auto grid md:grid-cols-2 gap-12 my-12">
+        <div>
+            <h2 class="font-mono-courier text-xs uppercase tracking-widest text-[#e6e7e8]/50 mb-4">Positioning</h2>
+            <p class="text-3xl font-medium leading-snug text-[#e6e7e8]">
+                We are not decorators. We are strategists who work in physical space.
+            </p>
+        </div>
+        <div class="flex flex-col justify-center">
+            <p class="text-[#e6e7e8]/80 text-base leading-relaxed mb-6">
+                Every event we design begins with one question: <span class="font-sans-semi text-[#e6e7e8]">what does this brand need to prove tonight, and to whom?</span>
+            </p>
+            <p class="text-[#e6e7e8]/80 text-base leading-relaxed">
+                The answer to that question determines everything - the space, the atmosphere, the guest journey, the moment that gets remembered.
+            </p>
+        </div>
+    </section>
+
+    <!-- CORE CAPABILITIES GRID -->
+    <section class="px-6 py-20 md:px-12 max-w-7xl mx-auto border-t border-brand">
+        <div class="mb-16">
+            <p class="font-mono-courier text-xs uppercase tracking-widest text-accent mb-2">Capabilities</p>
+            <h2 class="text-3xl text-[#e6e7e8]">Six things. One standard.</h2>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-brand">
+            <div class="p-8 bg-[#232328] space-y-3">
+                <span class="font-mono-courier text-xs text-accent">01</span>
+                <h3 class="text-xl font-medium text-[#e6e7e8]">Event Concept & Strategy</h3>
+                <p class="text-[#e6e7e8]/70 text-sm leading-relaxed">We define the argument before we design the space.</p>
+            </div>
+            <div class="p-8 bg-[#232328] space-y-3">
+                <span class="font-mono-courier text-xs text-accent">02</span>
+                <h3 class="text-xl font-medium text-[#e6e7e8]">Space Design & Art Direction</h3>
+                <p class="text-[#e6e7e8]/70 text-sm leading-relaxed">Every physical element is part of a single visual language. Nothing decorative.</p>
+            </div>
+            <div class="p-8 bg-[#232328] space-y-3">
+                <span class="font-mono-courier text-xs text-accent">03</span>
+                <h3 class="text-xl font-medium text-[#e6e7e8]">Production & Execution</h3>
+                <p class="text-[#e6e7e8]/70 text-sm leading-relaxed">From technical drawings to final build. The concept arrives at reality without compromise.</p>
+            </div>
+            <div class="p-8 bg-[#232328] space-y-3">
+                <span class="font-mono-courier text-xs text-accent">04</span>
+                <h3 class="text-xl font-medium text-[#e6e7e8]">Brand Activation</h3>
+                <p class="text-[#e6e7e8]/70 text-sm leading-relaxed">Events designed around a specific brand moment launch, announcement, milestone.</p>
+            </div>
+            <div class="p-8 bg-[#232328] space-y-3">
+                <span class="font-mono-courier text-xs text-accent">05</span>
+                <h3 class="text-xl font-medium text-[#e6e7e8]">Guest Experience Design</h3>
+                <p class="text-[#e6e7e8]/70 text-sm leading-relaxed">The invitation. The arrival. The flow. The detail no one notices but everyone feels.</p>
+            </div>
+            <div class="p-8 bg-[#232328] space-y-3">
+                <span class="font-mono-courier text-xs text-accent">06</span>
+                <h3 class="text-xl font-medium text-[#e6e7e8]">Atmosphere & Sound Direction</h3>
+                <p class="text-[#e6e7e8]/70 text-sm leading-relaxed">Sound constructs the room before the guest sees it. We design that too.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CASE STUDIES -->
+    <section id="works" class="px-6 py-20 md:px-12 max-w-7xl mx-auto border-t border-brand">
+        <div class="mb-20">
+            <p class="font-mono-courier text-xs uppercase tracking-widest text-[#e6e7e8]/50 mb-2">Selected Cases</p>
+            <h2 class="text-3xl text-[#e6e7e8]">Proof over statement.</h2>
+        </div>
+
+        <div class="space-y-32">
+            <!-- CASE 01: SDLG / DEVEX -->
+            <div class="grid md:grid-cols-12 gap-12 items-start">
+                <div class="md:col-span-5 space-y-6">
+                    <span class="font-mono-courier text-xs uppercase tracking-wider text-accent">SDLG DEVEX | INDUSTRIAL BRAND EVENT</span>
+                    <h3 class="text-2xl text-[#e6e7e8]">The brief asked for a celebration. We built an argument.</h3>
+                    <p class="text-sm text-[#e6e7e8]/70 leading-relaxed">
+                        Custom steel installations transformed the venue into a physical extension of the brand's identity. A Dancing Digger Show turned heavy machinery into performance - making the brand's core value of precision and power visible, not just stated. <a href="https://www.instagram.com/p/DaCcvTcjQ6e/?img_index=1" target="_blank" rel="noopener noreferrer" class="text-accent underline underline-offset-4 decoration-brand">more...</a>
+                    </p>
+                    <div class="font-mono-courier text-[10px] uppercase tracking-wider flex flex-wrap gap-2 text-[#e6e7e8]/60">
+                        <span class="border border-brand px-2 py-1">Industrial Event</span>
+                        <span class="border border-brand px-2 py-1">Brand Activation</span>
+                        <span class="border border-brand px-2 py-1">Space Design</span>
+                        <span class="border border-brand px-2 py-1">Art Direction</span>
+                    </div>
+                </div>
+                <div class="md:col-span-7 border border-brand overflow-hidden bg-[#e6e7e8]/5 aspect-video">
+                    <img src="Devex Case.png" alt="SDLG Devex Case Study" class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <!-- CASE 02: LION AUTO -->
+            <div class="grid md:grid-cols-12 gap-12 items-start">
+                <div class="md:col-span-7 border border-brand overflow-hidden order-2 md:order-1 bg-[#e6e7e8]/5 aspect-video">
+                    <img src="Lion Case.png" alt="Lion Auto Case Study" class="w-full h-full object-cover">
+                </div>
+                <div class="md:col-span-5 order-1 md:order-2 space-y-6">
+                    <span class="font-mono-courier text-xs uppercase tracking-wider text-accent">LION AUTO × MATE KOBAKHIDZE | MOTORSPORT BRAND ACTIVATION</span>
+                    <h3 class="text-2xl text-[#e6e7e8]">The race was in Britain. The room was in Tbilisi. We closed that distance.</h3>
+                    <p class="text-sm text-[#e6e7e8]/70 leading-relaxed">
+                        Lion Auto imports vehicles from American auctions to Georgia. That night, we built a space that connected a logistics brand to its sponsored driver 4,000 kilometres away - through a live F4 broadcast, branded karting track, and an environment that made the connection feel physical, not just symbolic. <a href="https://www.instagram.com/p/DZ5A1GXiDoi/?img_index=1" target="_blank" rel="noopener noreferrer" class="text-accent underline underline-offset-4 decoration-brand">more...</a>
+                    </p>
+                    <div class="font-mono-courier text-[10px] uppercase tracking-wider flex flex-wrap gap-2 text-[#e6e7e8]/60">
+                        <span class="border border-brand px-2 py-1">Sports Sponsorship</span>
+                        <span class="border border-brand px-2 py-1">Brand Activation</span>
+                        <span class="border border-brand px-2 py-1">Live Broadcast</span>
+                        <span class="border border-brand px-2 py-1">Guest Experience</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CASE 03: PORSCHE -->
+            <div class="grid md:grid-cols-12 gap-12 items-start">
+                <div class="md:col-span-5 space-y-6">
+                    <span class="font-mono-courier text-xs uppercase tracking-wider text-accent">PORSCHE | LUXURY BRAND EXPERIENCE, KAKHETI</span>
+                    <h3 class="text-2xl text-[#e6e7e8]">The most confident brands don't announce themselves. They demonstrate.</h3>
+                    <p class="text-sm text-[#e6e7e8]/70 leading-relaxed">
+                        No graphic motifs. No loud branding. An experience built around silence, precision, and the Kakheti landscape - communicating the Porsche ethos through material and atmosphere rather than messaging. When the brand is strong enough, the event doesn't need to explain it. <a href="https://www.instagram.com/p/DavB8cpCkq3/?img_index=1" target="_blank" rel="noopener noreferrer" class="text-accent underline underline-offset-4 decoration-brand">more...</a>
+                    </p>
+                    <div class="font-mono-courier text-[10px] uppercase tracking-wider flex flex-wrap gap-2 text-[#e6e7e8]/60">
+                        <span class="border border-brand px-2 py-1">Spring Escape | 2026</span>
+                        <span class="border border-brand px-2 py-1">Luxury Event</span>
+                        <span class="border border-brand px-2 py-1">Brand Experience</span>
+                        <span class="border border-brand px-2 py-1">Art Direction</span>
+                    </div>
+                </div>
+                <div class="md:col-span-7 border border-brand overflow-hidden bg-[#e6e7e8]/5 aspect-video">
+                    <img src="Porsche Case.png" alt="Porsche Case Study" class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <!-- CASE 04: RED BULL -->
+            <div class="grid md:grid-cols-12 gap-12 items-start">
+                <div class="md:col-span-7 border border-brand overflow-hidden order-2 md:order-1 bg-[#e6e7e8]/5 aspect-video">
+                    <img src="Red Bull Case.png" alt="Red Bull FMX Jam Case Study" class="w-full h-full object-cover">
+                </div>
+                <div class="md:col-span-5 order-1 md:order-2 space-y-6">
+                    <span class="font-mono-courier text-xs uppercase tracking-wider text-accent">RED BULL FMX JAM | FREESTYLE MOTOCROSS EVENT ACTIVATION</span>
+                    <h3 class="text-2xl text-[#e6e7e8]">Batumi had never seen anything like it. We made sure they never forgot it.</h3>
+                    <p class="text-sm text-[#e6e7e8]/70 leading-relaxed">
+                        Red Bull brought freestyle motocross to Batumi for the first time. We built the environment that turned a sports showcase into a brand moment - a space where every trick landed inside a deliberately designed experience, not just in front of a crowd. <a href="https://www.instagram.com/reels/DMmiFQGMj2t/" target="_blank" rel="noopener noreferrer" class="text-accent underline underline-offset-4 decoration-brand">more...</a>
+                    </p>
+                    <div class="font-mono-courier text-[10px] uppercase tracking-wider flex flex-wrap gap-2 text-[#e6e7e8]/60">
+                        <span class="border border-brand px-2 py-1">Event Production</span>
+                        <span class="border border-brand px-2 py-1">Brand Activation</span>
+                        <span class="border border-brand px-2 py-1">Spatial Design</span>
+                        <span class="border border-brand px-2 py-1">Guest Experience</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- METHODOLOGY -->
+    <section class="px-6 py-20 md:px-12 max-w-7xl mx-auto border-t border-brand">
+        <div class="mb-16">
+            <p class="font-mono-courier text-xs uppercase tracking-widest text-[#e6e7e8]/50 mb-2">Methodology</p>
+            <h2 class="text-3xl text-[#e6e7e8]">Three phases. No shortcuts.</h2>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-12">
+            <div class="space-y-4">
+                <div class="font-mono-courier text-xs text-accent">Phase 01 - Understand</div>
+                <p class="text-sm text-[#e6e7e8]/80 leading-relaxed">
+                    We read your brief. Then we go further. What is your brand trying to prove? Who is in the room? What should they feel in the first thirty seconds of arriving? We don't start designing until we can answer these questions precisely.
+                </p>
+            </div>
+            <div class="space-y-4">
+                <div class="font-mono-courier text-xs text-accent">Phase 02 - Argue</div>
+                <p class="text-sm text-[#e6e7e8]/80 leading-relaxed">
+                    We develop a single clear concept not a mood board, not a reference folder. One argument for what this event should be and why. You approve the argument before we design a single element.
+                </p>
+            </div>
+            <div class="space-y-4">
+                <div class="font-mono-courier text-xs text-accent">Phase 03 - Build</div>
+                <p class="text-sm text-[#e6e7e8]/80 leading-relaxed">
+                    From technical drawings to final execution, we manage the complete production process. The concept you approved arrives at reality without compromise. No value engineering of the idea.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CLIENTS SECTIONS WITH ENLARGED PNG IMAGES -->
+    <section id="clients" class="px-6 py-24 md:px-12 max-w-7xl mx-auto border-t border-brand">
+        <div class="text-center mb-20">
+            <p class="font-mono-courier text-xs uppercase tracking-widest text-[#e6e7e8]/40 mb-3">Brands that trusted the argument</p>
+        </div>
+        
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-x-16 gap-y-16 items-center justify-items-center opacity-80 grayscale contrast-125 hover:opacity-100 transition duration-300">
+            <img src="porsche logo.png" alt="Porsche" class="h-10 w-auto object-contain">
+            <img src="red bull logo.png" alt="Red Bull" class="h-11 w-auto object-contain">
+            <img src="volvo logo.png" alt="Volvo" class="h-6 w-auto object-contain">
+            <img src="tegeta logo.png" alt="Tegeta" class="h-8 w-auto object-contain">
+            <img src="motul logo.png" alt="Motul" class="h-10 w-auto object-contain">
+            <img src="mazda logo.png" alt="Mazda" class="h-6 w-auto object-contain">
+            <img src="lotus logo.png" alt="Lotus" class="h-11 w-auto object-contain">
+            <img src="lion logo.png" alt="Lion Auto" class="h-12 w-auto object-contain">
+            <img src="metropol logo.png" alt="Metropol" class="h-10 w-auto object-contain">
+            <img src="devex logo.png" alt="Devex" class="h-8 w-auto object-contain">
+            <img src="avtobani logo.png" alt="Avtobani" class="h-8 w-auto object-contain">
+            <img src="art geni logo.png" alt="Art Geni" class="h-12 w-auto object-contain">
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contact" class="border-t border-brand bg-[#232328] px-6 py-24 md:px-12 text-[#e6e7e8]/70">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-end">
+            <div class="space-y-8">
+                <div>
+                    <h3 class="text-4xl text-[#e6e7e8] mb-2">one conversation.</h3>
+                    <h3 class="text-4xl text-[#e6e7e8]">then we get to work.</h3>
+                </div>
+                
+                <div class="space-y-2 font-mono-courier text-sm tracking-wide">
+                  
+                    <p>Email: <a href="mailto:info@unframe.ge" class="text-accent underline underline-offset-4 decoration-brand">info@unframe.ge</a></p>
+                    <p>Phone: +995 571 44 12 12</p>
+                    <p><a href="https://www.instagram.com/unframe_events/" target="_blank" rel="noopener noreferrer" class="text-accent underline underline-offset-4 decoration-brand">Instagram</a>
+                </div>
+            </div>
+            
+            <div class="flex flex-col md:items-end space-y-4">
+                <img src="unframe logo.png" alt="unframe" class="h-5 w-auto object-contain mb-2">
+                <p class="font-mono-courier text-[10px] uppercase tracking-widest text-accent">the event is the argument.</p>
+                <p class="font-mono-courier text-[10px] text-[#e6e7e8]/30">&copy; 2026 un|frame Studio.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
