@@ -1,35 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>unframe | Event Design & Strategy Studio</title>
-    <!-- Webpage Favicon -->
+    
+    <meta name="description" content="unframe is an event design and strategy studio specializing in minimalist, high-impact physical spaces, art direction, and custom visual identity systems." />
+    <meta name="keywords" content="unframe, event design, strategy studio, art direction, spatial design, Tbilisi, Georgia, brand activation, luxury production" />
+    <meta name="author" content="un|frame Studio" />
+
     <link rel="icon" type="image/png" href="favicon.png">
     
-    <!-- Tailwind CSS Engine -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     
-    <!-- Adobe Fonts Embed (FreightBig Pro & Acumin Pro) + Google Fonts (Courier Prime) -->
     <link rel="stylesheet" href="https://use.typekit.net/your-kit-id.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
-<!-- Open Graph / Facebook / Chat Previews -->
+
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://unframe.ge/" />
     <meta property="og:title" content="unframe | event design & strategy studio" />
-    <meta property="og:description" content="event managment, design & production." />
+    <meta property="og:description" content="event management, design & production." />
     <meta property="og:image" content="https://unframe.ge/og-preview.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
 
-    <!-- Twitter Previews -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="https://unframe.ge/" />
     <meta name="twitter:title" content="unframe | event design & strategy studio" />
-    <meta name="twitter:description" content="event managment, design & production." />
+    <meta name="twitter:description" content="event management, design & production." />
     <meta name="twitter:image" content="https://unframe.ge/og-preview.png" />
+    
     <style>
         :root {
             --font-freight-italic: "freight-big-pro", serif; 
@@ -70,16 +72,14 @@
         .border-brand { border-color: rgba(230, 231, 232, 0.1); }
     </style>
 </head>
-<body class="antialiased selection:bg-[#f16263] selection:text-[#232328]">
+<body class="antialiased selection:bg-[#f16263] selection:text-[#232328] relative min-h-screen">
 
-    <!-- NAVIGATION WITH LOGO & HAMBURGER -->
     <nav class="border-b border-brand bg-[#232328]/90 backdrop-blur sticky top-0 z-50 px-6 py-4 md:px-12">
         <div class="max-w-7xl mx-auto flex justify-between items-center relative">
             
-            <!-- Company Logo Image Asset -->
-          <a href="/" class="block hover:opacity-90 transition">
-          <img src="unframe logo.png" alt="unframe" class="h-8 w-auto object-contain">
-      </a>
+            <a href="/" class="block hover:opacity-90 transition">
+                <img src="unframe logo.png" alt="unframe" class="h-8 w-auto object-contain">
+            </a>
             
             <input type="checkbox" id="menu-toggle" class="hidden peer">
             
@@ -100,7 +100,6 @@
         </div>
     </nav>
 
-    <!-- INTRO SECTION -->
     <header class="relative px-6 py-24 md:px-12 md:py-36 max-w-7xl mx-auto border-b border-brand">
         <div class="max-w-4xl">
             <p class="font-mono-courier text-xs uppercase tracking-widest text-accent mb-6">Event Design & Strategy Studio</p>
@@ -120,14 +119,12 @@
         </div>
     </header>
 
-    <!-- ABOUT / TEAM SECTION -->
     <section id="about" class="px-6 py-24 md:px-12 max-w-7xl mx-auto border-b border-brand">
         <div class="mb-16">
             <p class="font-mono-courier text-xs text-[#e6e7e8]/50 uppercase tracking-widest mb-3">the four people responsible for your event.</p>
         </div>
 
         <div class="grid lg:grid-cols-4 sm:grid-cols-2 gap-x-8 gap-y-16 items-start">
-            <!-- Inga -->
             <div class="flex flex-col">
                 <div class="bg-[#e6e7e8]/5 aspect-square border border-brand grayscale hover:grayscale-0 transition duration-300 overflow-hidden mb-6">
                     <img src="Inga.png" alt="Inga Pirtskhalaishvili" class="w-full h-full object-cover">
@@ -144,7 +141,6 @@
                 </div>
             </div>
 
-            <!-- Joseph -->
             <div class="flex flex-col">
                 <div class="bg-[#e6e7e8]/5 aspect-square border border-brand grayscale hover:grayscale-0 transition duration-300 overflow-hidden mb-6">
                     <img src="Joseph.png" alt="Joseph K." class="w-full h-full object-cover">
@@ -161,10 +157,8 @@
                 </div>
             </div>
 
-            <!-- Stretched Text Block Container for Lasha & Likuna -->
             <div class="sm:col-span-2 flex flex-col">
                 <div class="grid grid-cols-2 gap-x-8">
-                    <!-- Lasha Header Block -->
                     <div class="flex flex-col">
                         <div class="bg-[#e6e7e8]/5 aspect-square border border-brand grayscale hover:grayscale-0 transition duration-300 overflow-hidden mb-6">
                             <img src="Lasha.png" alt="Lasha Kipshidze" class="w-full h-full object-cover">
@@ -175,7 +169,6 @@
                         </div>
                     </div>
 
-                    <!-- Likuna Header Block -->
                     <div class="flex flex-col">
                         <div class="bg-[#e6e7e8]/5 aspect-square border border-brand grayscale hover:grayscale-0 transition duration-300 overflow-hidden mb-6">
                             <img src="Likuna.png" alt="Likuna Tsibadze" class="w-full h-full object-cover">
@@ -187,7 +180,6 @@
                     </div>
                 </div>
 
-                <!-- Shared Full-Width Column Description positioned precisely to share baseline -->
                 <div class="pt-4 flex flex-col justify-between flex-grow">
                     <p class="text-sm text-[#e6e7e8]/70 leading-relaxed font-light mb-4">
                         Responsible for translating concepts into production reality. The people who make sure what was promised is what gets built. They are behind the complete guest journey - from the invitation to the final moment of the evening.
@@ -211,7 +203,6 @@
         </div>
     </section>
 
-    <!-- POSITIONING STATEMENT -->
     <section class="px-6 py-20 md:px-12 max-w-7xl mx-auto grid md:grid-cols-2 gap-12 my-12">
         <div>
             <h2 class="font-mono-courier text-xs uppercase tracking-widest text-[#e6e7e8]/50 mb-4">Positioning</h2>
@@ -229,7 +220,6 @@
         </div>
     </section>
 
-    <!-- CORE CAPABILITIES GRID -->
     <section class="px-6 py-20 md:px-12 max-w-7xl mx-auto border-t border-brand">
         <div class="mb-16">
             <p class="font-mono-courier text-xs uppercase tracking-widest text-accent mb-2">Capabilities</p>
@@ -270,7 +260,6 @@
         </div>
     </section>
 
-    <!-- CASE STUDIES -->
     <section id="works" class="px-6 py-20 md:px-12 max-w-7xl mx-auto border-t border-brand">
         <div class="mb-20">
             <p class="font-mono-courier text-xs uppercase tracking-widest text-[#e6e7e8]/50 mb-2">Selected Cases</p>
@@ -278,7 +267,6 @@
         </div>
 
         <div class="space-y-32">
-            <!-- CASE 01: SDLG / DEVEX -->
             <div class="grid md:grid-cols-12 gap-12 items-start">
                 <div class="md:col-span-5 space-y-6">
                     <span class="font-mono-courier text-xs uppercase tracking-wider text-accent">SDLG DEVEX | INDUSTRIAL BRAND EVENT</span>
@@ -298,7 +286,6 @@
                 </div>
             </div>
 
-            <!-- CASE 02: LION AUTO -->
             <div class="grid md:grid-cols-12 gap-12 items-start">
                 <div class="md:col-span-7 border border-brand overflow-hidden order-2 md:order-1 bg-[#e6e7e8]/5 aspect-video">
                     <img src="Lion Case.png" alt="Lion Auto Case Study" class="w-full h-full object-cover">
@@ -318,7 +305,6 @@
                 </div>
             </div>
 
-            <!-- CASE 03: PORSCHE -->
             <div class="grid md:grid-cols-12 gap-12 items-start">
                 <div class="md:col-span-5 space-y-6">
                     <span class="font-mono-courier text-xs uppercase tracking-wider text-accent">PORSCHE | LUXURY BRAND EXPERIENCE, KAKHETI</span>
@@ -338,7 +324,6 @@
                 </div>
             </div>
 
-            <!-- CASE 04: RED BULL -->
             <div class="grid md:grid-cols-12 gap-12 items-start">
                 <div class="md:col-span-7 border border-brand overflow-hidden order-2 md:order-1 bg-[#e6e7e8]/5 aspect-video">
                     <img src="Red Bull Case.png" alt="Red Bull FMX Jam Case Study" class="w-full h-full object-cover">
@@ -360,7 +345,6 @@
         </div>
     </section>
 
-    <!-- METHODOLOGY -->
     <section class="px-6 py-20 md:px-12 max-w-7xl mx-auto border-t border-brand">
         <div class="mb-16">
             <p class="font-mono-courier text-xs uppercase tracking-widest text-[#e6e7e8]/50 mb-2">Methodology</p>
@@ -389,29 +373,27 @@
         </div>
     </section>
 
-    <!-- CLIENTS SECTIONS WITH ENLARGED PNG IMAGES -->
     <section id="clients" class="px-6 py-24 md:px-12 max-w-7xl mx-auto border-t border-brand">
         <div class="text-center mb-20">
             <p class="font-mono-courier text-xs uppercase tracking-widest text-[#e6e7e8]/40 mb-3">Brands that trusted the argument</p>
         </div>
         
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-x-16 gap-y-16 items-center justify-items-center opacity-80 grayscale contrast-125 hover:opacity-100 transition duration-300">
-            <img src="porsche logo.png" alt="Porsche" class="h-10 w-auto object-contain">
-            <img src="red bull logo.png" alt="Red Bull" class="h-11 w-auto object-contain">
-            <img src="volvo logo.png" alt="Volvo" class="h-6 w-auto object-contain">
-            <img src="tegeta logo.png" alt="Tegeta" class="h-8 w-auto object-contain">
-            <img src="motul logo.png" alt="Motul" class="h-10 w-auto object-contain">
-            <img src="mazda logo.png" alt="Mazda" class="h-6 w-auto object-contain">
-            <img src="lotus logo.png" alt="Lotus" class="h-11 w-auto object-contain">
-            <img src="lion logo.png" alt="Lion Auto" class="h-12 w-auto object-contain">
-            <img src="metropol logo.png" alt="Metropol" class="h-10 w-auto object-contain">
-            <img src="devex logo.png" alt="Devex" class="h-8 w-auto object-contain">
-            <img src="avtobani logo.png" alt="Avtobani" class="h-8 w-auto object-contain">
-            <img src="art geni logo.png" alt="Art Geni" class="h-12 w-auto object-contain">
+            <img src="porsche logo.png" alt="Porsche" class="h-11 w-auto object-contain">
+            <img src="red bull logo.png" alt="Red Bull" class="h-12 w-auto object-contain">
+            <img src="volvo logo.png" alt="Volvo" class="h-7 w-auto object-contain">
+            <img src="tegeta logo.png" alt="Tegeta" class="h-9 w-auto object-contain">
+            <img src="motul logo.png" alt="Motul" class="h-11 w-auto object-contain">
+            <img src="mazda logo.png" alt="Mazda" class="h-7 w-auto object-contain">
+            <img src="lotus logo.png" alt="Lotus" class="h-12 w-auto object-contain">
+            <img src="lion logo.png" alt="Lion Auto" class="h-13 w-auto object-contain">
+            <img src="metropol logo.png" alt="Metropol" class="h-11 w-auto object-contain">
+            <img src="devex logo.png" alt="Devex" class="h-9 w-auto object-contain">
+            <img src="avtobani logo.png" alt="Avtobani" class="h-9 w-auto object-contain">
+            <img src="art geni logo.png" alt="Art Geni" class="h-13 w-auto object-contain">
         </div>
     </section>
 
-    <!-- FOOTER -->
     <footer id="contact" class="border-t border-brand bg-[#232328] px-6 py-24 md:px-12 text-[#e6e7e8]/70">
         <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-end">
             <div class="space-y-8">
@@ -421,20 +403,108 @@
                 </div>
                 
                 <div class="space-y-2 font-mono-courier text-sm tracking-wide">
-                  
                     <p>Email: <a href="mailto:info@unframe.ge" class="text-accent underline underline-offset-4 decoration-brand">info@unframe.ge</a></p>
                     <p>Phone: +995 571 44 12 12</p>
-                    <p><a href="https://www.instagram.com/unframe_events/" target="_blank" rel="noopener noreferrer" class="text-accent underline underline-offset-4 decoration-brand">Instagram</a>
+                    <p><a href="https://www.instagram.com/unframe_events/" target="_blank" rel="noopener noreferrer" class="text-accent underline underline-offset-4 decoration-brand">Instagram</a></p>
                 </div>
             </div>
             
             <div class="flex flex-col md:items-end space-y-4">
                 <img src="unframe logo.png" alt="unframe" class="h-5 w-auto object-contain mb-2">
                 <p class="font-mono-courier text-[10px] uppercase tracking-widest text-accent">the event is the argument.</p>
+                <div class="flex flex-wrap gap-x-4 gap-y-1 font-mono-courier text-[9px] text-[#e6e7e8]/40 md:justify-end">
+                    <button onclick="toggleModal('privacy-modal')" class="hover:text-accent transition">Privacy Policy</button>
+                    <span>/</span>
+                    <button onclick="toggleModal('terms-modal')" class="hover:text-accent transition">Terms of Service</button>
+                </div>
                 <p class="font-mono-courier text-[10px] text-[#e6e7e8]/30">&copy; 2026 un|frame Studio.</p>
             </div>
         </div>
     </footer>
 
+    <div id="cookie-banner" class="hidden fixed bottom-6 left-6 right-6 md:left-auto md:max-w-md bg-[#232328] border border-brand p-6 shadow-2xl z-50 transition-all duration-300">
+        <p class="font-mono-courier text-xs text-accent uppercase tracking-wider mb-2">Cookie Policy</p>
+        <p class="text-xs text-[#e6e7e8]/80 leading-relaxed mb-4">
+            We use minimal, essential analytics cookies to understand how you interact with our studio's portfolio. No raw tracking. No third-party ad networks.
+        </p>
+        <div class="flex justify-end gap-3 font-mono-courier text-[10px] uppercase tracking-wider">
+            <button onclick="acceptCookies()" class="bg-[#f16263] text-[#232328] px-4 py-2 hover:opacity-90 transition font-bold">Accept</button>
+            <button onclick="dismissCookies()" class="border border-brand px-4 py-2 hover:bg-white/5 transition">Decline</button>
+        </div>
+    </div>
+
+    <div id="privacy-modal" class="hidden fixed inset-0 bg-[#232328]/95 backdrop-blur-md z-50 flex items-center justify-center p-6">
+        <div class="bg-[#232328] border border-brand max-w-2xl w-full p-8 space-y-6 max-h-[80vh] overflow-y-auto">
+            <div class="flex justify-between items-start border-b border-brand pb-4">
+                <div>
+                    <h2 class="text-3xl text-[#e6e7e8]">Privacy Policy</h2>
+                    <p class="font-mono-courier text-xs text-accent uppercase tracking-wider mt-1">Last updated: July 2026</p>
+                </div>
+                <button onclick="toggleModal('privacy-modal')" class="font-mono-courier text-lg text-[#e6e7e8]/50 hover:text-accent">&times; Close</button>
+            </div>
+            <div class="text-sm text-[#e6e7e8]/80 space-y-4 leading-relaxed font-light">
+                <p>At <strong>un|frame Studio</strong>, we protect the privacy of our visitors. This policy covers how we handle information on this static portfolio site.</p>
+                <h4 class="font-mono-courier text-xs text-[#e6e7e8] uppercase tracking-wider mt-6">1. Information We Collect</h4>
+                <p>We do not use tracking systems to profile your online habits. If you reach out to us via email or telephone, we will only use your contact details to communicate directly with you regarding your inquiry.</p>
+                <h4 class="font-mono-courier text-xs text-[#e6e7e8] uppercase tracking-wider mt-6">2. Cookies</h4>
+                <p>Our hosting setup on GitHub Pages uses standard, minimal infrastructure indicators to safely load pages. If enabled, we use secure analytics metrics to track basic page performance anonymously.</p>
+                <h4 class="font-mono-courier text-xs text-[#e6e7e8] uppercase tracking-wider mt-6">3. External Links</h4>
+                <p>Our portfolio includes case studies linked directly to social networks (like Instagram or LinkedIn). These platforms have their own separate data tracking and privacy frameworks.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="terms-modal" class="hidden fixed inset-0 bg-[#232328]/95 backdrop-blur-md z-50 flex items-center justify-center p-6">
+        <div class="bg-[#232328] border border-brand max-w-2xl w-full p-8 space-y-6 max-h-[80vh] overflow-y-auto">
+            <div class="flex justify-between items-start border-b border-brand pb-4">
+                <div>
+                    <h2 class="text-3xl text-[#e6e7e8]">Terms of Service</h2>
+                    <p class="font-mono-courier text-xs text-accent uppercase tracking-wider mt-1">Last updated: July 2026</p>
+                </div>
+                <button onclick="toggleModal('terms-modal')" class="font-mono-courier text-lg text-[#e6e7e8]/50 hover:text-accent">&times; Close</button>
+            </div>
+            <div class="text-sm text-[#e6e7e8]/80 space-y-4 leading-relaxed font-light">
+                <p>Welcome to <strong>un|frame Studio</strong>. By accessing this site, you agree to comply with the terms set forth below.</p>
+                <h4 class="font-mono-courier text-xs text-[#e6e7e8] uppercase tracking-wider mt-6">1. Intellectual Property</h4>
+                <p>All brand systems, space concepts, art direction frameworks, case-study media, layouts, and copy hosted on this website are the unique intellectual property of un|frame Studio and our respective clients.</p>
+                <p>Unauthorized reproduction, modification, or distribution of this site's visuals or structural layout parameters without direct written consent is strictly prohibited.</p>
+                <h4 class="font-mono-courier text-xs text-[#e6e7e8] uppercase tracking-wider mt-6">2. Studio Inquiries</h4>
+                <p>Communicating via our contact details does not establish a formal agency representation contract. Formal engagements are initiated only through signed, mutually executed service statements.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // --- Cookie Banner Controls ---
+        window.addEventListener('DOMContentLoaded', () => {
+            const consent = localStorage.getItem('cookie-consent');
+            if (!consent) {
+                document.getElementById('cookie-banner').classList.remove('hidden');
+            }
+        });
+
+        function acceptCookies() {
+            localStorage.setItem('cookie-consent', 'accepted');
+            document.getElementById('cookie-banner').classList.add('hidden');
+            // If you eventually embed Google Analytics or Meta Pixel, initialize them here
+        }
+
+        function dismissCookies() {
+            localStorage.setItem('cookie-consent', 'dismissed');
+            document.getElementById('cookie-banner').classList.add('hidden');
+        }
+
+        // --- Inline Modal Toggle Engine ---
+        function toggleModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal.classList.contains('hidden')) {
+                modal.classList.remove('hidden');
+                document.body.style.overflow = 'hidden'; // Lock background scroll
+            } else {
+                modal.classList.add('hidden');
+                document.body.style.overflow = ''; // Unlock background scroll
+            }
+        }
+    </script>
 </body>
 </html>
